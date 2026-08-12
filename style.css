@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --sidebar-navy: #0b0e1a;
+    --content-black: #0d0e15;
+    --menu-white: #ffffff;
+    --text-dark: #1a1a1f;
+    --accent-blue: #3b5bff;
+}
+
+.container-logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100px;
+    background: var(--sidebar-navy);
+    display: flex;
+    align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-top: 30px;
+    margin-left: 16px;
+}
+.logo-title {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 24px;
+  color: #ffffff;
+  letter-spacing: 0.3px;
+    margin-top: 20px;
+}
+
+.menu {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 300px;
+    background: var(--sidebar-navy);
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 100px);    
+}
+
+.menu-div {
+    margin: 8px 0;
+}
+.menu a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  background: var(--menu-white);
+  color: var(--text-dark);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+  margin: 20px 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ 
+.menu a:hover {
+  background: var(--accent-blue);
+  color: #ffffff;
+}
+.encabezado {
+    display: flex;
+    width: 100%;
+}
+.dash-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.salesforce-button{
+    background: rgb(0, 112, 210);
+    color: rgb(255, 255, 255);
+    border-width: medium;
+    border-style: none;
+    border-color: currentcolor;
+    border-image: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    opacity: 1
+}
