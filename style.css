@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 :root {
-    --sidebar-navy: #0b0e1a;
+    --sidebar-navy: #c5cceb;
     --content-black: #0d0e15;
     --menu-white: #ffffff;
     --text-dark: #1a1a1f;
@@ -37,7 +37,7 @@
   font-style: italic;
   font-weight: 700;
   font-size: 24px;
-  color: #ffffff;
+  color: #000;
   letter-spacing: 0.3px;
     margin-top: 20px;
 }
@@ -84,13 +84,15 @@
 .dash-header{
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 12px;
+    align-items: center;
+    margin-left: 300px; 
+    padding: 20px 30px; 
+    width: calc(100% - 300px); 
+
 }
 .salesforce-button{
     background: rgb(0, 112, 210);
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     border-width: medium;
     border-style: none;
     border-color: currentcolor;
@@ -98,10 +100,80 @@
     border-radius: 8px;
     padding: 8px 16px;
     cursor: pointer;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 8px;
     font-weight: 600;
-    font-size: 14px;
-    opacity: 1
+    font-size: 16px;
+    opacity: 1;
+}
+
+.svg-inline--fa {
+    box-sizing: content-box;
+    display: var(--fa-display, inline-block);
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+    width: var(--fa-width, 1.25em);
+}
+
+.periodos {
+    display: flex;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px 24px;
+    box-shadow: 0 2px 8px #0000000f;
+    border: 2px solid #f0f0f0;
+    margin-left: 300px;
+}
+.filtro-periodo {
+    font-size: 18px;
+    margin-right: 10px;
+}
+.periodos input {
+    margin-right: 10px;
+    height: 30px;
+}
+
+.gestiones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-left: 300px;
+    width: calc(100% - 300px);
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+.divprueba{
+    width: auto; /* ya no fijo */
+    height: 200px;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    flex-direction: column;
+}
+.spanGraphic   {
+    text-align: center;
+    width: 100%;
+}
+.title-graphic {
+    font-size: 18px;
+    font-weight: Bold;
+    align-items: top;
+    text-align: center;
+    margin-top: 10px;
+    padding-left: 10px;
+    color: rgb(8, 5, 161);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+} 
+.Text-Daily {
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.gestiones-number{
+    display: flex;
+    justify-content: start;
 }
