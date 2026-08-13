@@ -5,7 +5,7 @@
 }
 
 :root {
-    --sidebar-navy: #c5cceb;
+    --sidebar-navy: #1b1e30;
     --content-black: #0d0e15;
     --menu-white: #ffffff;
     --text-dark: #1a1a1f;
@@ -31,17 +31,18 @@ main {
   gap: 10px;
 }
 .logo img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  margin-top: 30px;
-    margin-left: 16px;
+    width: 100px;
+    height: 100px;
+    object-fit: fill;
+    background-color: #Ffff;
+    border-radius: 10%
+
 }
 .logo-title {
   font-style: italic;
   font-weight: 700;
   font-size: 24px;
-  color: #000;
+  color: #fff;
   letter-spacing: 0.3px;
     margin-top: 20px;
 }
