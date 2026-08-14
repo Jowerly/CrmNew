@@ -350,13 +350,13 @@
     margin-left: 24px;
 }
 .search-User{
-    width: 40%;
+    width: 60%;
     margin-left: 22px;
     height: 30px;
     margin-top: 14px;
     display: flex;
     gap: 14px;
-    flex-direction: row-reverse;
+    justify-content: space-around;
 }
 .search-User button {
     margin-left: 4px;
@@ -371,6 +371,10 @@
     display: flex;
     align-items: center;
     font-size: 18px;
+}
+.search-User span input {
+        width: 100%;
+
 }
 .button-newUser{
     background-color: #05090E;
@@ -403,32 +407,9 @@
     font-weight: 700;
     font-family: 'Times New Roman', Times, serif;
 }
-.tabla-users {
+.periodo-time{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     width: 100%;
-    margin-top: 16px;
-}
-.tabla-users thead{
-    border: 2px solid black;
-}
-.tabla-users td {
-    text-align: center;
-}
-.tabla-header {
-    height: 40px;
-    background-color: #05090E;
-    color: white;
-}
-.button-gestionar {
-    width: 40px;
-    margin: 10px 0 10px;
-    border: none;
-    height: 40px;
-}
-.button-gestionar:hover {
-    background-color: rgb(253, 253, 78);
-    border: 2px solid black;
-
-}
-.bi-pencil-fill {
-    font-size: 26px;
 }

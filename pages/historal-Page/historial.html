@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="users.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
 </head>
 <body>
-    <div class="dashboard-wrapper">
+            <div class="dashboard-wrapper">
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-top">
                 <div class="logo">
@@ -60,7 +60,7 @@
             <div class="user-header">
                 <div class="user-brand">
                     <i class="bi bi-person-badge-fill">
-                    <span class="user-title">Usuarios</span>
+                    <span class="user-title">Historial de Gestiones</span>
                 </i>
                 </div>
                 <button class="button-newUser"><i class="bi bi-plus-lg"></i> Nuevo Usuario
@@ -68,51 +68,18 @@
             </div>
             <div class="search-User">
                 <input type="search" placeholder="Buscar por nombre o DNI/CE">
-                <button><i class="bi bi-filter"></i></button>
+                <select name="asesores" id="">Todos los asesores
+                    <option value="all">todos los asesores</option>
+                    <Option>Sergio De la Cruz Morales</Option>
+                    <option value="">Antuannet Kary Medina Borda</option>
+                    <option value="">Gianpier Olaechea Gutierrez</option>
+                </select>
+                <div class="periodo-time">
+                <span>Desde<input type="date" name="" id=""></span>
+                </div>
+            </div>
             </div>
         </section>
-        <section>
-            <table class="tabla-users">
-                <thead class="tabla-header">
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>DNI/CE</th>
-                        <th>Correo</th>
-                        <th>ROL</th>
-                        <th>Estado</th>
-                        <th>Gestionar</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>GianPier</td>
-                        <td>Olaechea Gutierrez</td>
-                        <td>75763834</td>
-                        <td>golaechea@clarob2bnegocios.com.pe</td>
-                        <td>asesor</td>
-                        <td>Activo</td>
-                        <div>
-                            <td><button class="button-gestionar"><i class="bi bi-pencil-fill"></i></button></td>
-                        </div>
-                    </tr>
-                    <tr>
-                        <td>Sergio Gustavo</td>
-                        <td>De la Cruz Morales</td>
-                        <td>60246091</td>
-                        <td>sdelacruz@clarob2bnegocios.com.pe</td>
-                        <td>asesor</td>
-                        <td>Activo</td>
-                        <div>
-                            <td><button class="button-gestionar"><i class="bi bi-pencil-fill"></i></button></td>
-                        </div>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </main>
-    </div>
 </body>
-<script src="userScript.js"></script>
+<script src="script.js"></script>
 </html>
-

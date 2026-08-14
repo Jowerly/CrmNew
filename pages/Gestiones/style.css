@@ -309,6 +309,17 @@
 .titulos h2 {
     opacity: 0.5;
 }
+.titulos {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+.titulos h1, h2 {
+    margin-top: 10px;
+}
+.titulos h2 {
+    opacity: 0.5;
+}
 .salesforce-button{
     background: rgb(0, 112, 210);
     color: #ffffff;
@@ -350,19 +361,22 @@
     margin-left: 24px;
 }
 .search-User{
-    width: 40%;
+    width: 60%;
     margin-left: 22px;
     height: 30px;
     margin-top: 14px;
     display: flex;
     gap: 14px;
-    flex-direction: row-reverse;
+    flex-direction: row;
 }
 .search-User button {
     margin-left: 4px;
 
 }
-.bi-filter {
+.search-placeholder{
+    padding-left: 15px;
+}
+.bi-clipboard-data-fill {
     font-size: 26px;
 }
 .search-User input {
@@ -371,6 +385,9 @@
     display: flex;
     align-items: center;
     font-size: 18px;
+}
+.search-User input {
+    margin-left: 20px;
 }
 .button-newUser{
     background-color: #05090E;
@@ -395,40 +412,66 @@
     font-size: 16px;
     margin-right: 6px;
 }
-.bi-person-badge-fill {
+.bi-database-fill {
     font-size: 32px
 }
-.user-title {
+.DB-title {
     font-style: normal;
     font-weight: 700;
     font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+}
+.excel-donwload {
+    color: white;
+    background-color: green;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    margin: -8px  auto;
+    height: 40px;
+    justify-content: center;
+}
+.bi-cloud-arrow-down-fill {
+    font-size: 20px;
+    margin-right: 8px;
 }
 .tabla-users {
-    width: 100%;
-    margin-top: 16px;
+    width: 95%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin: 14px auto;
+
 }
-.tabla-users thead{
-    border: 2px solid black;
+.tabla-users th,
+.tabla-users td {
+    border: 1x solid #e0e0e0;
+    padding: 10px 8px;
 }
 .tabla-users td {
     text-align: center;
+    vertical-align: middle;
+}
+.tabla-users tbody tr:nth-child(even) {
+    background-color: #f7f7f9;
+}
+.tabla-users tbody tr:hover {
+    background-color: #eef1ff;
 }
 .tabla-header {
     height: 40px;
     background-color: #05090E;
     color: white;
 }
-.button-gestionar {
-    width: 40px;
-    margin: 10px 0 10px;
-    border: none;
+.tabla-header th {
+    border: 1px solid #e0e0e0;
+    padding: 10px 8px;
+    white-space: nowrap;
+}
+.ver-mas {
+    display: flex;
+    flex-direction: column  ;
+}
+.ver-mas button {
     height: 40px;
-}
-.button-gestionar:hover {
-    background-color: rgb(253, 253, 78);
-    border: 2px solid black;
-
-}
-.bi-pencil-fill {
-    font-size: 26px;
+    font-size: 18px;
 }

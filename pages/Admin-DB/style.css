@@ -395,28 +395,58 @@
     font-size: 16px;
     margin-right: 6px;
 }
-.bi-person-badge-fill {
+.bi-database-fill {
     font-size: 32px
 }
-.user-title {
+.DB-title {
     font-style: normal;
     font-weight: 700;
     font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
 }
 .tabla-users {
-    width: 100%;
-    margin-top: 16px;
+    width: 95%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin: 14px auto;
+
 }
-.tabla-users thead{
-    border: 2px solid black;
+.tabla-users th,
+.tabla-users td {
+    border: 1x solid #e0e0e0;
+    padding: 10px 8px;
 }
 .tabla-users td {
     text-align: center;
+    vertical-align: middle;
+}
+.tabla-users tbody tr:nth-child(even) {
+    background-color: #f7f7f9;
+}
+.tabla-users tbody tr:hover {
+    background-color: #eef1ff;
 }
 .tabla-header {
     height: 40px;
     background-color: #05090E;
     color: white;
+}
+.tabla-header th {
+    border: 1px solid #e0e0e0;
+    padding: 10px 8px;
+    white-space: nowrap;
+}
+.button-gestionar {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
 }
 .button-gestionar {
     width: 40px;
