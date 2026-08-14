@@ -132,6 +132,14 @@ main {
     gap: 10px;
     min-width: 0;
     overflow: hidden;
+    flex-direction: row;
+    justify-content: centers;
+}
+.logo a {
+    list-style: none;
+    vertical-align: center;
+    align-items: center;
+    display: flex;
 }
 
 .logo-img {
@@ -149,6 +157,7 @@ main {
     color: #fff;
     letter-spacing: 0.3px;
     white-space: nowrap;
+    margin-left: 16px;
 }
 
 .btn-toggle {
@@ -360,6 +369,7 @@ main {
     align-content: center;
     justify-content: center;
     border-radius: 15px;
+    border: none;
 }
 .button-dia:hover {
     background-color: #000;
