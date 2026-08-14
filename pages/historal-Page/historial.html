@@ -67,7 +67,7 @@
                 </button>
             </div>
             <div class="search-User">
-                <input type="search" placeholder="Buscar por nombre o DNI/CE">
+                <input class="barra-busqueda" type="search" placeholder="Buscar por nombre o DNI/CE">
                 <select name="asesores" id="">Todos los asesores
                     <option value="all">todos los asesores</option>
                     <Option>Sergio De la Cruz Morales</Option>
@@ -75,11 +75,65 @@
                     <option value="">Gianpier Olaechea Gutierrez</option>
                 </select>
                 <div class="periodo-time">
-                <span>Desde<input type="date" name="" id=""></span>
+                <span class="periodo-font">Desde:</span><input type="date" name="" id="fecha-inicio">
+                </div>
+                <div class="periodo-time">
+                <span class="periodo-font">Hasta:</span><input type="date" name="" id="fecha-final">
                 </div>
             </div>
-            </div>
         </section>
+                      <section>
+            <table class="tabla-users">
+                <thead class="tabla-header">
+                    <tr>
+                        <th>Ultimo Contacto</th>
+                        <th>RUC</th>
+                        <th>Razon Social</th>
+                        <th>Asesor</th>
+                        <th>Segmento</th>
+                        <th>Lineas</th>
+                        <th>Ultima interaccion</th>
+                        <th>Iteracciones</th>
+                        <th>Oportunidades</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>14/08/2026</td>
+                        <td>20507260536</td>
+                        <td>BAKERY AND PASTRY COMPANY E.I.R.L.</td>
+                        <td>ACTIVO</td>
+                        <td>PYME</td>
+                        <td>Libre</td>
+                        <td>Cuenta Libre</td>
+                        <td>0</td>
+                        <td>0</td>                        <td>14</td>
+
+                    </tr>
+                    <tr>
+                        <td>14/08/2026</td>
+                        <td>20507260536</td>
+                        <td>ASESORANDES S.A.C</td>
+                        <td>Gianpier Olaechea Gutierrez</td>
+                        <td>PYME</td>
+                        <td>13</tds>
+                        <td>No Contesta</td>
+                        <td>1</td>
+                        <td>—</td>
+                        <td>
+                            <div class="ver-mas">
+                                <button><i class="bi bi-eye-fill"></i></button>
+                                <span>Ver</span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    </div>
+
 </body>
 <script src="script.js"></script>
 </html>
