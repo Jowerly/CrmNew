@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="users.css">
+    <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
 </head>
@@ -55,64 +55,69 @@
                 </div>
             </nav>
         </aside>
-    <main class="main-content">
-        <section class="users">
-            <div class="user-header">
-                <div class="user-brand">
-                    <i class="bi bi-person-badge-fill">
-                    <span class="user-title">Usuarios</span>
-                </i>
+        <main class="main-content">
+            <section>
+                <div class="solicitud-header">
+                    <i class="bi bi-file-check-fill"></i>
+                    <h1>SOLICITUDES</h1>
                 </div>
-                <button class="button-newUser"><i class="bi bi-plus-lg"></i> Nuevo Usuario
-                </button>
-            </div>
-            <div class="search-User">
-                <input type="search" placeholder="Buscar por nombre o DNI/CE">
-                <button><i class="bi bi-filter"></i></button>
-            </div>
-        </section>
+                <div class="search-section">
+                    <select name="status" id="status">
+                        <option value="estado1">Todos los estados</option>
+                        <option value="estado2">no disponible</option>
+                        <option value="estado3">fracaso</option>
+                        <option value="estado4">ganado</option>
+                    </select>
+                    <select name="asesores" id="">
+                        <option>gianpier olaechea</option>
+                        <option>gianpier olaechea</option>
+                        <option>gianpier olaechea</option>
+                    </select>
+                    <span>Desde: </span>
+                    <input type="date" name="" id="">
+                    <span>Hasta: </span>
+                    <input type="date" name="" id="">
+                </div>
+            </section>
         <section>
             <table class="tabla-users">
                 <thead class="tabla-header">
                     <tr>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>DNI/CE</th>
-                        <th>Correo</th>
-                        <th>ROL</th>
+                        <th>Fecha Solicitud</th>
+                        <th>Asesor</th>
+                        <th>RUC</th>
+                        <th>Razón Social</th>
                         <th>Estado</th>
-                        <th>Gestionar</th>
+                        <th>Revisado por</th>
+                        <th>Fecha Revisión</th>
+                        <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>GianPier</td>
-                        <td>Olaechea Gutierrez</td>
-                        <td>75763834</td>
-                        <td>golaechea@clarob2bnegocios.com.pe</td>
-                        <td>asesor</td>
-                        <td>Activo</td>
-                        <div>
-                            <td><button class="button-gestionar"><i class="bi bi-pencil-fill"></i></button></td>
-                        </div>
+                        <td>12/08/2026 14:31</td>
+                        <td>Enrique Martin Alza Calle</td>
+                        <td>20601092183</td>
+                        <td>INVERSIONES GASTRONOMICAS LIMA S.A.C.</td>
+                        <td>Aprobada</td>
+                        <td>Alexis Ayala</td>
+                        <td>12/08/2026 14:32</td>
+                        <td>—</td>
                     </tr>
                     <tr>
-                        <td>Sergio Gustavo</td>
-                        <td>De la Cruz Morales</td>
-                        <td>60246091</td>
-                        <td>sdelacruz@clarob2bnegocios.com.pe</td>
-                        <td>asesor</td>
-                        <td>Activo</td>
-                        <div>
-                            <td><button class="button-gestionar"><i class="bi bi-pencil-fill"></i></button></td>
-                        </div>
+                        <td>12/08/2026 14:31</td>
+                        <td>Enrique Martin Alza Calle</td>
+                        <td>20601092183</td>
+                        <td>INVERSIONES GASTRONOMICAS LIMA S.A.C.</td>
+                        <td>Aprobada</td>
+                        <td>Alexis Ayala</td>
+                        <td>12/08/2026 14:32</td>
+                        <td>—</td>
                     </tr>
                 </tbody>
             </table>
         </section>
-    </main>
-    </div>
+        </main>
 </body>
-<script src="userScript.js"></script>
+<script src="script.js"></script>
 </html>
-

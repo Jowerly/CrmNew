@@ -20,7 +20,7 @@
 } */
 .dashboard-wrapper {
     display: flex;
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
 }
 .sidebar {
@@ -119,12 +119,14 @@
 }
 .main-content {
     margin-left: var(--sidebar-width-expanded);
-    transition: margin-left 0.25s ease;
-    flex: 1;
+    width: calc(100% - var(--sidebar-width-expanded));
+    transition: margin-left 0.25s ease, width 0.25s ease;
     min-width: 0;
+    padding: 24px 30px;
 }
 .dashboard-wrapper:has(.sidebar.collapsed) .main-content {
     margin-left: var(--sidebar-width-collapsed);
+    width: calc(100% - var(--sidebar-width-collapsed));
 }
 .logo {
     display: flex;
@@ -309,17 +311,6 @@
 .titulos h2 {
     opacity: 0.5;
 }
-.titulos {
-    display: flex;
-    flex-direction: column;
-    color: #fff;
-}
-.titulos h1, h2 {
-    margin-top: 10px;
-}
-.titulos h2 {
-    opacity: 0.5;
-}
 .salesforce-button{
     background: rgb(0, 112, 210);
     color: #ffffff;
@@ -349,44 +340,130 @@
     width: var(--fa-width, 1.25em);
 }
 
-.user-header {
-    margin-top: 18px;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-.user-brand {
-    margin-left: 24px;
-}
-.search-User{
-    width: 60%;
-    margin-left: 22px;
-    height: 30px;
-    margin-top: 14px;
-    display: flex;
-    gap: 14px;
-    flex-direction: row;
-}
-.search-User button {
-    margin-left: 4px;
+/* ===== Sección "Historial de Gestiones" ===== */
+
+.users {
 
 }
-.search-placeholder{
-    padding-left: 15px;
-}
-.bi-clipboard-data-fill {
-    font-size: 26px;
-}
-.search-User input {
+
+.user-header {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 18px;
+    padding: 16px 24px;
     width: 100%;
-    height: 100%;
+    background-color: #eef0f7;
+    border-radius: 8px;
+}
+
+.user-header-top {
     display: flex;
     align-items: center;
-    font-size: 18px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
 }
-.search-User input {
-    margin-left: 20px;
+
+.user-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 0;
 }
+
+.user-brand .bi-clock-history {
+    font-size: 20px;
+    color: var(--text-dark);
+}
+
+.user-title {
+    font-style: normal;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: var(--text-dark);
+}
+
+.user-count {
+    font-size: 13px;
+    color: #8a8d9a;
+    font-weight: 500;
+}
+
+.search-User {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.search-User button {
+    margin-left: 4px;
+}
+
+/* Barra de búsqueda con ancho fijo (no afecta a los demás campos) */
+.barra-busqueda {
+    flex: 0 0 45%;
+    max-width: 45%;
+}
+
+.barra-busqueda input {
+    width: 100%;
+    height: 38px;
+    padding: 0 14px;
+    border: 1px solid #d8dae3;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.search-User select {
+    flex: 0 0 auto;
+    height: 38px;
+    padding: 0 10px;
+    border: 1px solid #d8dae3;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #fff;
+}
+
+.bi-filter {
+    font-size: 20px;
+    color: #3b3f4c;
+}
+
+.periodo-time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    justify-content: flex-start;
+    flex: 0 0 auto;
+}
+
+.periodo-font {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.search-User input[type="date"] {
+    height: 38px;
+    padding: 0 8px;
+    border: 1px solid #d8dae3;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+#fecha-inicio {
+    width: 100%;
+    max-width: 150px;
+}
+#fecha-final{
+    width: 100%;
+    max-width: 150px;
+}
+
 .button-newUser{
     background-color: #05090E;
     color: white;
@@ -396,6 +473,8 @@
     margin-right: 16px;
     cursor: pointer;
     border: none;
+    display: flex;
+    align-items: center;
 }
 .button-newUser:hover {
     background-color: white;
@@ -410,29 +489,12 @@
     font-size: 16px;
     margin-right: 6px;
 }
-.bi-database-fill {
+.bi-person-badge-fill {
     font-size: 32px
 }
-.DB-title {
-    font-style: normal;
-    font-weight: 700;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 24px;
-}
-.excel-donwload {
-    color: white;
-    background-color: green;
-    width: 350px;
-    display: flex;
-    align-items: center;
-    margin: -8px  auto;
-    height: 40px;
-    justify-content: center;
-}
-.bi-cloud-arrow-down-fill {
-    font-size: 20px;
-    margin-right: 8px;
-}
+
+/* ===== Tabla ===== */
+
 .tabla-users {
     width: 95%;
     border-collapse: collapse;
@@ -442,7 +504,7 @@
 }
 .tabla-users th,
 .tabla-users td {
-    border: 1x solid #e0e0e0;
+    border: 1px solid #e0e0e0;
     padding: 10px 8px;
 }
 .tabla-users td {
@@ -465,11 +527,49 @@
     padding: 10px 8px;
     white-space: nowrap;
 }
-.ver-mas {
-    display: flex;
-    flex-direction: column  ;
+
+/* ===== Sección "Solicitudes" ===== */
+
+.bi-file-check-fill {
+    font-size: 32px;
 }
-.ver-mas button {
-    height: 40px;
-    font-size: 18px;
+
+.solicitud-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+.solicitud-header h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 26px;
+}
+
+.search-section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    margin-left: 0;
+}
+.search-section select {
+    height: 38px;
+    padding: 0 10px;
+    border: 1px solid #d8dae3;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #fff;
+}
+.search-section span {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+.search-section input[type="date"] {
+    height: 38px;
+    padding: 0 8px;
+    border: 1px solid #d8dae3;
+    border-radius: 8px;
+    font-size: 14px;
 }
