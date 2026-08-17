@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-top">
+                <div class="logo">
+                    <a href="/pages/dashboard/index.html"><img src="logo.png" alt="Logo" class="logo-img">
+                    <span class="logo-title">B Mobile</span>
+                    </a>
+                </div>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li class="menu-link active">
+                        <a href="/pages/usersPage/users.html"><i class="bi bi-people-fill"></i><span>Usuarios</span></a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="/pages/Admin-DB/base.html"><i class="bi bi-database-fill"></i><span>Admin DB</span></a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="/pages/Gestiones/gestiones.html"><i class="bi bi-clipboard2-data-fill"></i><span>Gestiones</span></a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="/pages/historal-Page/historial.html"><i class="bi bi-clock-history"></i><span>Historial</span></a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="/pages/solicitud/solicitud.html"><i class="bi bi-file-earmark-text-fill"></i><span>Solicitudes</span></a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="/pages/Reportes/index.html"><i class="bi bi-bar-chart-line-fill"></i><span>Reportes</span></a>
+                    </li>
+                </ul>
+
+                <button class="btn-toggle" id="btnToggleSidebar" title="Fijar/ocultar menú">
+                    <i class="bi bi-lock-fill"></i>
+                </button>c
+
+                <div class="user-card" id="user">
+                    <a href="#">
+                        <span class="user-avatar"><i class="bi bi-person-fill"></i></span>
+                        <span class="user-info">
+                            <span class="user-name">Mi cuenta</span>
+                            <span class="user-role">Ver perfil</span>
+                        </span>
+                    </a>
+                </div>
+            </nav>
+        </aside>    
+    <main>
+        <section>
+            <div>
+                <i class="bi bi-building-fill"></i><span>Mis empresas</span>
+            </div>
+            <div>
+                <input type="search">
+                <select name="operadores" id="operadores">
+                    <option value="todas las operadoras"></option>
+                    <option value="Claro"></option>
+                    <option value="Entel"></option>
+                    <option value="Movitar"></option>
+                </select>
+                <div class="filtros-lineas">
+                    <input type="number">Min
+                    <span>---</span>
+                    <input type="number">Max
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="card">
+                <div class="card-title">
+                    <span>20101502059</span>
+                    <span>19/05/2026</span>
+                    <button><i class="bi bi-eye-fill"></i>Ver historial </button>
+                </div>
+                <div class="card-body">
+                    <span class="razon-social">INSTITUTO KIRSCHBAUM DE CIRUGIA PLASTICA Y ESTETICA SOCIEDAD CIVIL DE RESPONSABILIDAD LIMITADA</span>
+                    <div class="lineas">
+                        <span><i class="bi bi-bar-chart-line-fill"></i></span>
+                        <span class="caegoria">PYMe</span>
+                        <span><i class="bi bi-geo-alt-fill"></i>Ver direccion</span>
+                    </div>
+                    <div class="lineas-nombre">
+                        <span class="linea1">Entel 24</span>
+                        <span class="linea2">Claro</span>
+                    </div>
+                    <div class="card-salesforce">
+                        <span>Consultor SF</span>
+                        <span>Cuenta libre</span>
+                        <span>Asig.SF</span>
+                    </div>
+                    <div class="card-salesforce-bottom">
+                        <span>Sustento</span>
+                        <span>NO</span>
+                        <span>Estatus </span>
+                        <SPAn>libre</SPAn>
+                    </div>
+                    <div class="card-contacto">
+                        <div class="Nombre-contacto">
+                            <img src="logo.png" alt="">
+                                <span class="">GIANINA LIZBETH ESLAVA CORSANO</span>
+                             <span class="cargo-contacto">Recursos Humanos</span>
+                        </div>
+                        <div class="info-personal">
+                            <i class="bi bi-person-vcard-fill"></i><span>09151437</span>
+                            <i class="bi bi-envelope-arrow-up-fill"></i><span>consultas@kirschbaumplasticsurgery.com</span>
+                        </div>
+                        <div class="botones-card">
+                            <button class="button-rrll">RRLL</buton>
+                                <button class="button-añadir">Añadir contacto</button>
+                                <button class="Tipificar">Tipificar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>

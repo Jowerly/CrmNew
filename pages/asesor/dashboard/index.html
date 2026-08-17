@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+<body>
+        <div class="dashboard-wrapper">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-top">
+                <div class="logo">
+                    <a href="/pages/dashboard/index.html"><img src="logo.png" alt="Logo" class="logo-img">
+                    <span class="logo-title">B Mobile</span>
+                    </a>
+                </div>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li class="menu-link active">
+                        <a href="/pages/usersPage/users.html"><i class="bi bi-people-fill"></i><span>Usuarios</span></a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="/pages/Admin-DB/base.html"><i class="bi bi-database-fill"></i><span>Admin DB</span></a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="/pages/Gestiones/gestiones.html"><i class="bi bi-clipboard2-data-fill"></i><span>Mi Cartera</span></a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="/pages/historal-Page/historial.html"><i class="bi bi-clock-history"></i><span>Historial</span></a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="/pages/solicitud/solicitud.html"><i class="bi bi-file-earmark-text-fill"></i><span>Solicitudes</span></a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="/pages/Reportes/index.html"><i class="bi bi-bar-chart-line-fill"></i><span>Reportes</span></a>
+                    </li>
+                </ul>
+
+                <button class="btn-toggle" id="btnToggleSidebar" title="Fijar/ocultar menú">
+                    <i class="bi bi-lock-fill"></i>
+                </button>
+
+                <div class="user-card" id="user">
+                    <a href="#">
+                        <span class="user-avatar"><i class="bi bi-person-fill"></i></span>
+                        <span class="user-info">
+                            <span class="user-name">Mi cuenta</span>
+                            <span class="user-role">Ver perfil</span>
+                        </span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+        <main class="main-content">
+
+<section class="reportes-dashboard">
+    <div class="reportes-header">
+        <div class="reportes-titulos">
+            <h1>TABLERO DE GESTIONES Y OPORTUNIDADES</h1>
+            <p>Seguimiento diario y análisis de cumplimiento de metas</p>
+        </div>
+        <div class="reportes-filtros">
+            <span>RANGO DE FECHAS:</span>
+            <input type="date" id="rep-fecha-inicio">
+            <span>-</span>
+            <input type="date" id="rep-fecha-final">
+            <button class="btn-filtrar-rep"><i class="bi bi-funnel-fill"></i> FILTRAR</button>
+        </div>
+    </div>
+
+    <!-- KPIs -->
+    <div class="kpi-grid">
+        <div class="kpi-card">
+            <div class="kpi-top">
+                <span class="kpi-label blue">META GESTIONES DIARIAS (MG)</span>
+                <i class="bi bi-bullseye kpi-icon blue"></i>
+            </div>
+            <div class="kpi-value">30</div>
+            <div class="kpi-sub">Empresas diarias</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-top">
+                <span class="kpi-label green">META OPORTUNIDADES DIARIAS (MO)</span>
+                <i class="bi bi-bullseye kpi-icon green"></i>
+            </div>
+            <div class="kpi-value">3</div>
+            <div class="kpi-sub">Oportunidades diarias</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-top">
+                <span class="kpi-label">GESTIONES REALIZADAS (GR)</span>
+                <i class="bi bi-clipboard2-check-fill kpi-icon"></i>
+            </div>
+            <div class="kpi-value">26</div>
+            <div class="kpi-sub">Promedio diario</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-top">
+                <span class="kpi-label green">OPORTUNIDADES OBTENIDAS (OR)</span>
+                <i class="bi bi-trophy-fill kpi-icon green"></i>
+            </div>
+            <div class="kpi-value">2.1</div>
+            <div class="kpi-sub">Promedio diario</div>
+        </div>
+    </div>
+
+    <!-- Gauges -->
+    <div class="gauge-grid">
+        <div class="gauge-card">
+            <span class="gauge-title">CUMPLIMIENTO DE GESTIONES (%)</span>
+            <span class="gauge-formula">= GR / 30 x 100</span>
+            <div class="gauge-circle" style="--pct:86.7; --color: var(--accent-blue);">
+                <span class="gauge-pct">86.7%</span>
+            </div>
+            <div class="gauge-range"><span>0%</span><span>100%</span></div>
+            <div class="gauge-footer blue">GR PROMEDIO: 26</div>
+        </div>
+        <div class="gauge-card">
+            <span class="gauge-title">CUMPLIMIENTO DE OPORTUNIDADES (%)</span>
+            <span class="gauge-formula">= OR / 3 x 100</span>
+            <div class="gauge-circle" style="--pct:70; --color: #2ecc71;">
+                <span class="gauge-pct">70.0%</span>
+            </div>
+            <div class="gauge-range"><span>0%</span><span>100%</span></div>
+            <div class="gauge-footer green">OR PROMEDIO: 2.1</div>
+        </div>
+        <div class="gauge-card">
+            <span class="gauge-title">TASA DE CONVERSIÓN (%)</span>
+            <span class="gauge-formula">= OR / GR x 100</span>
+            <div class="gauge-circle" style="--pct:8.1; --color: #d13bff;">
+                <span class="gauge-pct">8.1%</span>
+            </div>
+            <div class="gauge-range"><span>0%</span><span>100%</span></div>
+            <div class="gauge-footer purple">CONVERSIÓN PROMEDIO</div>
+        </div>
+        <div class="dias-card">
+            <span class="gauge-title">DÍAS LABORALES (DL)</span>
+            <span class="gauge-formula">(En el periodo seleccionado)</span>
+            <div class="dias-content">
+                <i class="bi bi-calendar-event dias-icon"></i>
+                <div>
+                    <div class="dias-value">15</div>
+                    <div class="dias-sub">Días laborales</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="charts-grid">
+        <div class="chart-panel">
+            <h3>EVOLUCIÓN DIARIA</h3>
+            <div class="chart-legend">
+                <span><i class="dot blue"></i>Gestiones realizadas (GR)</span>
+                <span><i class="dot green"></i>Oportunidades obtenidas (OR)</span>
+                <span><i class="dot dash-blue"></i>Meta Gestiones (MG)</span>
+                <span><i class="dot dash-green"></i>Meta Oportunidades (MO)</span>
+            </div>
+            <canvas id="chartEvolucion" height="180"></canvas>
+        </div>
+        <div class="chart-panel resumen-dia">
+            <h3>RESUMEN POR DÍA LABORAL</h3>
+            <div class="chart-legend">
+                <span><i class="dot blue"></i>GR (Gestiones realizadas)</span>
+                <span><i class="dot green"></i>OR (Oportunidades obtenidas)</span>
+            </div>
+            <div class="resumen-dia-body">
+                <canvas id="chartResumenDia" height="180"></canvas>
+                <div class="promedio-diario">
+                    <span>PROMEDIO<br>DIARIO</span>
+                    <div class="promedio-gr">GR: 26</div>
+                    <div class="promedio-or">OR: 2.1</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom row -->
+    <div class="bottom-grid">
+        <div class="metas-periodo-card">
+            <h3>METAS DEL PERÍODO (SEGÚN DÍAS LABORALES)</h3>
+            <div class="metas-periodo-body">
+                <div class="meta-item">
+                    <div class="meta-item-top">
+                        <span class="meta-label blue">META DE GESTIÓN PERÍODO</span>
+                        <i class="bi bi-clipboard2-check-fill blue"></i>
+                    </div>
+                    <span class="meta-formula">= DL x 30</span>
+                    <div class="meta-value">450</div>
+                    <div class="meta-sub">Gestiones</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-item-top">
+                        <span class="meta-label green">META DE OPORTUNIDAD PERÍODO</span>
+                        <i class="bi bi-trophy-fill green"></i>
+                    </div>
+                    <span class="meta-formula">= DL x 3</span>
+                    <div class="meta-value">45</div>
+                    <div class="meta-sub">Oportunidades</div>
+                </div>
+            </div>
+            <p class="metas-nota">Los cálculos se realizan en base a los datos del rango de fechas seleccionado y días laborales (DL).</p>
+        </div>
+
+        <div class="resumen-periodo-card">
+            <h3>RESUMEN DEL PERÍODO</h3>
+            <table class="tabla-resumen-periodo">
+                <thead>
+                    <tr><th>CONCEPTO</th><th>META PERÍODO</th><th>REALIZADO</th><th>CUMPLIMIENTO (%)</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Gestiones</td><td>450</td><td>390</td><td class="blue">86.7%</td></tr>
+                    <tr><td>Oportunidades</td><td>45</td><td>32</td><td class="green">71.1%</td></tr>
+                    <tr><td>Tasa de conversión (%)</td><td>–</td><td>–</td><td class="purple">8.1%</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="tendencia-card">
+            <h3>TENDENCIA GENERAL</h3>
+            <i class="bi bi-graph-up-arrow tendencia-icon"></i>
+            <div class="tendencia-texto">Buen desempeño</div>
+            <div class="tendencia-sub">Sigue así para alcanzar<br>las metas del período.</div>
+        </div>
+    </div>
+</section>
+        </main>
+</body>
+<script src="script.js"></script>
+</html>

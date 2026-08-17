@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-top">
+                <div class="logo">
+                    <a href="/pages/dashboard/index.html"><img src="logo.png" alt="Logo" class="logo-img">
+                    <span class="logo-title">B Mobile</span>
+                    </a>
+                </div>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li class="menu-link active">
+                        <a href="/pages/usersPage/users.html"><i class="bi bi-people-fill"></i><span>Usuarios</span></a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="/pages/Admin-DB/base.html"><i class="bi bi-database-fill"></i><span>Admin DB</span></a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="/pages/Gestiones/gestiones.html"><i class="bi bi-clipboard2-data-fill"></i><span>Gestiones</span></a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="/pages/historal-Page/historial.html"><i class="bi bi-clock-history"></i><span>Historial</span></a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="/pages/solicitud/solicitud.html"><i class="bi bi-file-earmark-text-fill"></i><span>Solicitudes</span></a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="/pages/Reportes/index.html"><i class="bi bi-bar-chart-line-fill"></i><span>Reportes</span></a>
+                    </li>
+                </ul>
+
+                <button class="btn-toggle" id="btnToggleSidebar" title="Fijar/ocultar menú">
+                    <i class="bi bi-lock-fill"></i>
+                </button>
+
+                <div class="user-card" id="user">
+                    <a href="#">
+                        <span class="user-avatar"><i class="bi bi-person-fill"></i></span>
+                        <span class="user-info">
+                            <span class="user-name">Mi cuenta</span>
+                            <span class="user-role">Ver perfil</span>
+                        </span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+    <section>
+        <div>
+            <h1>Funnel</h1>
+        </div>
+        <div class="filtro-search">
+            <input type="search">
+            <select name="Segmentos" id="Segmentos">
+                <option value="allSegments">Todos los segmentos</option>
+                <option value="micro">MicroEmpresa</option>
+                <option value="Pyme">Pyme</option>
+                <option value="Mayores">Mayores</option>
+                <option value="Empresas">Empresas</option>
+                <option value="Gobiernos">Gobiernos</option>
+            </select>
+            <div>
+                <span>Lineas: <input type="number" placeholder="Min"></span>
+                <span>---</span>
+                <input type="number" placeholder="Max">
+            </div>
+        </div>
+    </section>
+</body>
+<script src="script.js"></script>
+</html>

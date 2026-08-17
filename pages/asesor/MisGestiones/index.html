@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+<aside class="sidebar" id="sidebar">
+    <div class="sidebar-top">
+        <div class="logo">
+            <a href="/pages/dashboard/index.html"><img src="logo.png" alt="Logo" class="logo-img">
+            <span class="logo-title">B Mobile</span>
+            </a>
+        </div>
+    </div>
+    <nav class="menu">
+        <ul>
+            <li class="menu-link active">
+                <a href="/pages/usersPage/users.html"><i class="bi bi-people-fill"></i><span>Usuarios</span></a>
+            </li>
+            <li class="menu-link">
+                <a href="/pages/Admin-DB/base.html"><i class="bi bi-database-fill"></i><span>Mi cartera</span></a>
+            </li>
+            <li class="menu-link">
+                <a href="/pages/Gestiones/gestiones.html"><i class="bi bi-clipboard2-data-fill"></i><span>Mis gestiones</span></a>
+            </li>
+            <li class="menu-link">
+                <a href="/pages/historal-Page/historial.html"><i class="bi bi-clock-history"></i><span>Funnel</span></a>
+            </li>
+            <li class="menu-link">
+                <a href="/pages/solicitud/solicitud.html"><i class="bi bi-file-earmark-text-fill"></i><span>Calendario  </span></a>
+            </li>
+            <li class="menu-link">
+                <a href="/pages/Reportes/index.html"><i class="bi bi-bar-chart-line-fill"></i><span>Buscar  </span></a>
+            </li>
+        </ul>
+
+        <button class="btn-toggle" id="btnToggleSidebar" title="Fijar/ocultar menú">
+            <i class="bi bi-lock-fill"></i>
+        </button>
+
+        <div class="user-card" id="user">
+            <a href="#">
+                <span class="user-avatar"><i class="bi bi-person-fill"></i></span>
+                <span class="user-info">
+                    <span class="user-name">Mi cuenta</span>
+                    <span class="user-role">Ver perfil</span>
+                </span>
+            </a>
+        </div>
+    </nav>
+</aside>
+    <main class="main-content">
+        <header class="dash-header">
+            <div>
+                <i class="bi bi-clipboard-fill"></i>
+                <h1>Mis Gestiones</h1>
+                <span>30 empresas</span>
+            </div>
+            <input type="search" placeholder="Buscar por Razon social O RUC">
+            <select name="Estado" id="estado">
+                    <option value="">Todos los estados</option>
+                    <option value="Activo">Activo   </option>
+                    <option value="Cerrado Ganado">Cerrado Ganado</option>
+                    <option value="Cerrado perdido">Cerrado perdido</option>
+                    <option value="Descartado">Descartado</option>
+            </select>
+        </header>
+        <section>
+            <table class="tabla-users">
+                <thead class="tabla-header">
+                    <tr>
+                        <th>Ultimo Contacto</th>
+                        <th>RUC</th>
+                        <th>Razon Social</th>
+                        <th>Asesor</th>
+                        <th>Segmento</th>
+                        <th>Lineas</th>
+                        <th>Ultima interaccion</th>
+                        <th>Iteracciones</th>
+                        <th>Oportunidades</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>20101402186</td>
+                        <td>MARVAL POOL SERVICE E.I.R.L.</td>
+                        <td>PYME</td>
+                        <td>23</td>
+                        <td>17/07/2026</td>
+                        <td>No Contesta</td>
+                        <td>1</td>
+                        <td>-</td>
+                        <div>
+                            <td><button><i class="bi bi-pencil-square"></i></button></td>
+                        </div>                        
+
+                    </tr>
+                    <tr>
+                        <td>14/08/2026</td>
+                        <td>20507260536</td>
+                        <td>ASESORANDES S.A.C</td>
+                        <td>Gianpier Olaechea Gutierrez</td>
+                        <td>PYME</td>
+                        <td>13</td>
+                        <td>No Contesta</td>
+                        <td>1</td>
+                        <td>—</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
