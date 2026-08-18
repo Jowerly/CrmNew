@@ -21,28 +21,31 @@
             <nav class="menu">
                 <ul>
                     <li class="menu-link active">
-                        <a href="/pages/usersPage/users.html"><i class="bi bi-people-fill"></i><span>Usuarios</span></a>
+                        <a href="/pages/asesor/dashboard/index.html"><i class="bi bi-house-door-fill"></i></i><span>Dashboard</span></a>
                     </li>
                     <li class="menu-link">
-                        <a href="/pages/Admin-DB/base.html"><i class="bi bi-database-fill"></i><span>Admin DB</span></a>
+                        <a href="/pages/asesor/MisGestiones/index.html"><i class="bi bi-briefcase-fill"></i></i><span>Mis Gestiones</span></a>
                     </li>
                     <li class="menu-link">
-                        <a href="/pages/Gestiones/gestiones.html"><i class="bi bi-clipboard2-data-fill"></i><span>Gestiones</span></a>
+                        <a href="/pages/asesor/Funnel/index.html"><i class="bi bi-clock-history"></i><span>Funnel</span></a>
                     </li>
                     <li class="menu-link">
-                        <a href="/pages/historal-Page/historial.html"><i class="bi bi-clock-history"></i><span>Historial</span></a>
+                        <a href="/pages/asesor/calendario/public/index.html"><i class="bi bi-file-earmark-text-fill"></i><span>Calendario</span></a>
                     </li>
                     <li class="menu-link">
-                        <a href="/pages/solicitud/solicitud.html"><i class="bi bi-file-earmark-text-fill"></i><span>Solicitudes</span></a>
+                        <a href="/pages/asesor/formulario/index.html"><i class="bi bi-ui-radios"></i><span>Formulario Soporte</span></a>
                     </li>
                     <li class="menu-link">
-                        <a href="/pages/Reportes/index.html"><i class="bi bi-bar-chart-line-fill"></i><span>Reportes</span></a>
+                        <a href="/pages/asesor/speech/index.html"><i class="bi bi-volume-up-fill"></i><span>Speech</span></a>
+                    </li>
+                    <li class="menu-link">
+                        <a href="/pages/asesor/information/index.html"><i class="bi bi-info-square-fill"></i><span>Informacion planes</span></a>
                     </li>
                 </ul>
 
                 <button class="btn-toggle" id="btnToggleSidebar" title="Fijar/ocultar menú">
                     <i class="bi bi-lock-fill"></i>
-                </button>c
+                </button>
 
                 <div class="user-card" id="user">
                     <a href="#">
@@ -54,15 +57,15 @@
                     </a>
                 </div>
             </nav>
-        </aside>    
+        </aside>
     <main class="main-content">
         <section>
             <div>
-                <i class="bi bi-building-fill"></i><span>Mis empresas</span>
+                <i class="bi bi-building-fill"></i><span class="title-empresas">Mis empresas</span>
             </div>
             <div class="navegador"> 
                 <input type="search" placeholder="Buscar por RUC/ Razon Social" id="buscarMisEmpresas">
-                <select name="operadores" id="operadores">
+                <select name="operadores" id="operadores" class="selectOperador">
                     <option value="todas las operadoras">Todos los operadores</option>
                     <option value="Claro">Claro</option>
                     <option value="Entel">Entel</option>
@@ -76,52 +79,65 @@
                 </div>
             </div>
         </section>
-        <section class="cartas">
-            <div class="card">
-                <div class="card-title">
-                    <span>20101502059</span>
-                    <span>19/05/2026</span>
-                    <button><i class="bi bi-eye-fill"></i>Ver historial </button>
-                </div>
-                <div class="card-body">
-                    <span class="razon-social">INSTITUTO KIRSCHBAUM DE CIRUGIA PLASTICA Y ESTETICA SOCIEDAD CIVIL DE RESPONSABILIDAD LIMITADA</span>
-                    <div class="lineas">
-                        <span class="lineas-num"><i class="bi bi-bar-chart-line-fill"></i>25 lineas</span>
-                        <span class="categoria">PYMe</span>
-                        <span class="ubicacion"><i class="bi bi-geo-alt-fill"></i>Ver direccion</span>
-                    </div>
-                    <div class="lineas-nombre">
-                        <span class="linea1">Entel 24</span>
-                        <span class="linea2">Claro</span>
-                    </div>
-                    <div class="card-salesforce">
-                        <span>Consultor SF</span>
-                        <span>Cuenta libre</span>
-                        <span>Asig.SF</span>
-                    </div>
-                    <div class="card-salesforce-bottom">
-                        <span>Sustento</span>
-                        <span>NO</span>
-                        <span>Estatus </span>
-                        <SPAn>libre</SPAn>
-                    </div>
-                    <div class="card-contacto">
-                        <div class="Nombre-contacto">
-                            <img src="logo.png" alt="">
-                                <span class="">GIANINA LIZBETH ESLAVA CORSANO</span>
-                             <span class="cargo-contacto">Recursos Humanos</span>
-                        </div>
-                        <div class="info-personal">
-                            <i class="bi bi-person-vcard-fill"></i><span>09151437</span>
-                            <i class="bi bi-envelope-arrow-up-fill"></i><span>consultas@kirschbaumplasticsurgery.com</span>
-                        </div>
-                        <div class="botones-card">
-                            <button class="button-rrll">RRLL</buton>
-                                <button class="button-añadir">Añadir contacto</button>
-                                <button class="Tipificar">Tipificar</button>
-                        </div>
-                    </div>
-                </div>
+        <div class="card">
+          <div class="card-title">
+            <span class="ruc">20101502059</span>
+            <span class="fecha">19/05/2026</span>
+            <button><i class="bi bi-eye-fill"></i>Ver historial</button>
+          </div>
+      
+          <div class="card-body">
+            <span class="razon-social">INSTITUTO KIRSCHBAUM DE CIRUGIA PLASTICA Y ESTETICA SOCIEDAD CIVIL DE RESPONSABILIDAD LIMITADA</span>
+        
+            <div class="lineas">
+              <span class="lineas-num"><i class="bi bi-bar-chart-line-fill"></i>25 líneas</span>
+              <span class="categoria">PYMe</span>
+              <a class="ubicacion"><i class="bi bi-geo-alt-fill"></i>Ver dirección</a>
             </div>
-        </section>
+        
+            <div class="lineas-nombre">
+              <span class="linea1">Entel 24</span>
+              <span class="linea2">Claro</span>
+            </div>
+        
+            <div class="card-sf">
+              <div class="sf-item">
+                <span class="sf-label">Consultor SF</span>
+                <span class="sf-value">Cuenta libre</span>
+              </div>
+              <div class="sf-item">
+                <span class="sf-label">Asig. SF</span>
+                <span class="sf-value">—</span>
+              </div>
+              <div class="sf-item">
+                <span class="sf-label">Sustento</span>
+                <span class="sf-value si">NO</span>
+              </div>
+              <div class="sf-item">
+                <span class="sf-label">Estatus</span>
+                <span class="sf-value libre">Libre</span>
+              </div>
+            </div>
+        
+            <div class="card-contacto">
+              <div class="nombre-contacto">
+                <div class="avatar">GE</div>
+                <div class="info">
+                  <span class="nombre">GIANINA LIZBETH ESLAVA CORSANO</span>
+                  <span class="cargo">Recursos Humanos</span>
+                </div>
+              </div>
+              <div class="info-personal">
+                <span><i class="bi bi-person-vcard-fill"></i>09151437</span>
+                <span><i class="bi bi-envelope-arrow-up-fill"></i>consultas@kirschbaumplasticsurgery.com</span>
+              </div>
+              <div class="botones-card">
+                <button class="button-rrll">RRLL</button>
+                <button class="button-añadir">Añadir contacto</button>
+                <button class="tipificar">Tipificar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
     </main>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendador de Eventos - Google Calendar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>📅 Agendar Evento en Google Calendar</h2>
+        
+        <!-- Estado de la conexión -->
+        <div id="auth-section" class="card">
+            <p id="auth-status">Verificando conexión con Google...</p>
+            <a id="btn-login" href="/login" class="btn btn-google" style="display: none;">Conectar con Google</a>
+        </div>
+
+        <!-- Formulario para crear el evento -->
+        <form id="form-evento" class="card" style="display: none;">
+            <div class="form-group">
+                <label for="titulo">Título del Evento:</label>
+                <input type="text" id="titulo" required placeholder="Ej. Reunión de proyecto">
+            </div>
+
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" rows="3" placeholder="Detalles de la sesión..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="horaInicio">Hora Inicio:</label>
+                    <input type="time" id="horaInicio" required>
+                </div>
+                <div class="form-group">
+                    <label for="horaFin">Hora Fin:</label>
+                    <input type="time" id="horaFin" required>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-submit">Agendar Evento</button>
+        </form>
+
+        <!-- Mensajes de feedback -->
+        <div id="mensaje" class="alert" style="display: none;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
